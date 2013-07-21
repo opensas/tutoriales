@@ -15,6 +15,8 @@ Para eso surgieron los <a href='http://es.wikipedia.org/wiki/Control_de_versione
 Git
 ---
 
+<a href='http://git-scm.com/'><img src='images/github/github-git_logo.png' alt='git'/></a>
+
 Uno de los sistemas de control de versiones que últimamente ha cobrado gran popularidad es <a href='http://es.wikipedia.org/wiki/Git'>Git</a>. Fue creado por <a href='http://es.wikipedia.org/wiki/Linus_Torvalds'>Linus Torvalds</a> en 2005, para gestionar el código fuente del <a href='http://es.wikipedia.org/wiki/Linux_(núcleo)'>núcleo del sistema operativo Linux</a>. Git es además <a href='http://es.wikipedia.org/wiki/Software_libre'>software libre</a> publicado bajo la licencia <a href='https://gnu.org/licenses/old-licenses/lgpl-2.0.html'>GPL v2</a>.
 
 A diferencia de otros sistemas de control de versiones que cuentan con un repositorio central al cual hay que conectarse para obtener o enviar nuevas versiones, git es un sistema distribuido. Esto significa que cada repositorio de git contiene todo el historial del proyecto y es completamente autónomo e independiente de cualquier otro repositorio central o acceso a la red.
