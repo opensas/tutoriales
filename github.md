@@ -66,11 +66,7 @@ Esto es importante ya que cada vez que confirmes un cambio (commit) esta informa
 
 Para este tutorial utilizaremos el usuario 'hackatoner' y la cuenta de mail 'hackatoner.programar@gmail.com'
 
-![configurando git](images/github/github_config.png)
-
-con img
-
-<img src='images/github/github_config.png' width='300px' />
+![configurando git](images/github/github_config.png "Configurando git")
 
 Nota: También incluiremos esta configuración evitar un mensaje bastante molesto que git emite y para que tenga un comportamiento más conservador a la hora de actualizar ramas remotas. Para más información podés consultar <a href='http://stackoverflow.com/a/13148313/47633'>esta respuesta</a> en stackoverflow.
 
