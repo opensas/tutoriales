@@ -168,9 +168,9 @@ El flujo sería el siguiente:
 
 Cuando clonamos un repositorio todos los archivos estarán inicialmente bajo seguimiento de control (tracked).
 
-Al agregar nuevos archivos deberemos ponerlos bajo seguimiento con el comando (tracked) 'git add', con lo cual también pasará a estado preparado (staged)
+Al agregar nuevos archivos deberemos ponerlos bajo seguimiento con el comando (tracked) ```git add```, con lo cual también pasará a estado preparado (staged)
 
-Al modificar un archivo que ya estaba bajo seguimiento , también mediante el comando 'git add' haremos que pase de estado con modificaciones a preparado (staged)
+Al modificar un archivo que ya estaba bajo seguimiento , también mediante el comando ```git add``` haremos que pase de estado con modificaciones a preparado (staged)
 
 Finalmente, para confirmar los cambios de los archivos preparados (staged) ejecutaremos el comando 'git commit', con lo cual las modificaciones se grabarán en el repositorio, se creará un nuevo commit, y los archivos volverán a estado sin modificaciones (unmodified).
 
@@ -206,7 +206,7 @@ $ gedit index.html
 </html>
 ```
 
-Veamos ahora qué nos retorna el comando 'git status':
+Veamos ahora qué nos retorna el comando ```git status```:
 
 ```
 $ git status
@@ -226,7 +226,7 @@ no hay cambios agregados al commit (use «git add» o «git commit -a»)
 
 Aquí podemos ver que el archivo README.md está modificado (modified) pero no está preparado (staged) para ser confirmado. También vemos que el archivo index.html está sin seguimiento.
 
-Mediante el comando 'git add' indicaremos qué archivos queremos preparar (stage) para ser grabados en el próximo commit.
+Mediante el comando ```git add``` indicaremos qué archivos queremos preparar (stage) para ser grabados en el próximo commit.
 
 ```
 $ git add README.md
@@ -243,7 +243,7 @@ $ git status
 # index.html
 ```
 
-Ahora vemos que el archivo README.md está listo para ser confirmado. Para grabarlo (commit) utilizaremos el comando 'git commit'. Cada vez que hagamos un commit debemos incluir un mensaje mediante el parámetro -m, de la siguiente manera:
+Ahora vemos que el archivo README.md está listo para ser confirmado. Para grabarlo (commit) utilizaremos el comando ```git commit```. Cada vez que hagamos un commit debemos incluir un mensaje mediante el parámetro -m, de la siguiente manera:
 
 ```
 $ git commit -m 'completamos el archivo README.md'
@@ -287,7 +287,7 @@ origin  https://github.com/hackatoner/mi_primer_proyecto.git (fetch)
 origin  https://github.com/hackatoner/mi_primer_proyecto.git (push)
 ```
 
-Lo que tenemos que hacer ahora es enviar los cambios que acabamos de confirmar (commit) en nuestro repositorio local a nuestro repositorio remoto en github. Haremos esto mediante el comando 'git push'.
+Lo que tenemos que hacer ahora es enviar los cambios que acabamos de confirmar (commit) en nuestro repositorio local a nuestro repositorio remoto en github. Haremos esto mediante el comando ```git push```.
 
 > Debido a que estamos utilizando el url https, git nos pedirá nuestro nombre de usuario y password de github.
 
@@ -321,7 +321,7 @@ Manteniendo nuestro repositorio local actualizado
 
 A veces pasará que nuestro repositorio remoto de github está más actualizado que nuestro repositorio local. Esto puede ocurrir cuando utilizamos otra máquina para desarrollar, o cuando hay más de una persona trabajando sobre el mismo repositorio.
 
-Para ello utilizamos el comando 'git pull' para traernos los últimos cambios del repositorio remoto en github a nuestro repositorio local en nuestra estación de trabajo.
+Para ello utilizamos el comando ```git pull``` para traernos los últimos cambios del repositorio remoto en github a nuestro repositorio local en nuestra estación de trabajo.
 
 ```
 $ git pull
@@ -339,7 +339,7 @@ Fast-forward
 
 En este caso, git nos dice que el archivo README.md fue actualizado.
 
-> En este artículo hemos trabajado exclusivamente desde la línea de comandos, sin embargo existen varias [herramientas visuales](http://git-scm.com/downloads/guis) que nos facilitan la tarea (una herramienta muy recomendable es <a href='http://www.syntevo.com/smartgithg/'>SmartGit</a>). Sin embargo, es recomendable trabajar un buen tiempo desde la línea de comandos para aprender bien los conceptos básicos antes de adoptar una herramienta visual.
+> En este artículo hemos trabajado exclusivamente desde la línea de comandos, sin embargo existen varias [herramientas visuales](http://git-scm.com/downloads/guis) que nos facilitan la tarea (una muy recomendable es <a href='http://www.syntevo.com/smartgithg/'>SmartGit</a>). Sin embargo, es recomendable trabajar un buen tiempo desde la línea de comandos para aprender bien los conceptos básicos antes de adoptar una herramienta visual.
 
 Conclusión
 ==========
