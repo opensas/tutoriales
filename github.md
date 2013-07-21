@@ -1,3 +1,5 @@
+![Portal de datos publicos](images/portal/banner_portal_datos.png)
+
 Introducción a git y github
 ===========================
 
