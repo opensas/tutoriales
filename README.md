@@ -8,7 +8,7 @@ En esta sección encontrarás material de ayuda y consejos para poder participar
 ¿Cómo hago para participar del hackaton?
 ----------------------------------------
 
-Para participar del hackaton tendrás que aceptar las bases y condiciones del evento, completar el formulario de inscripción y contar con un repositorio de github en el cual publicar tu trabajo bajo una [licencia libre](http://www.gnu.org/licenses/license-list.html#GPLCompatibleLicenses) reconocida por la [Free Software Foundation](http://www.fsf.org/), como la [GPLv3](http://www.gnu.org/licenses/gpl.html).
+Para participar del hackaton tendrás que aceptar las bases y condiciones del evento, completar el formulario de inscripción y contar con un repositorio en [github](https://github.com/) en el cual publicar tu trabajo bajo una [licencia libre](http://www.gnu.org/licenses/license-list.html#GPLCompatibleLicenses) reconocida por la [Free Software Foundation](http://www.fsf.org/), como la [GPLv3](http://www.gnu.org/licenses/gpl.html).
 
 [Aquí](github_hackaton.md) tenés una guía rápida para sacar tu cuenta en github y preparar tu repositorio.
 
