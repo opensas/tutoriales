@@ -15,7 +15,7 @@ Para eso surgieron los <a href='http://es.wikipedia.org/wiki/Control_de_versione
 Git
 ---
 
-<a href='http://git-scm.com/'><img src='images/github/github-git_logo.png' alt='git'/></a>
+<a href='http://git-scm.com/'><img src='images/github/github-git_logo.png' alt='git' title='git'/></a>
 
 Uno de los sistemas de control de versiones que últimamente ha cobrado gran popularidad es <a href='http://es.wikipedia.org/wiki/Git'>Git</a>. Fue creado por <a href='http://es.wikipedia.org/wiki/Linus_Torvalds'>Linus Torvalds</a> en 2005, para gestionar el código fuente del <a href='http://es.wikipedia.org/wiki/Linux_(núcleo)'>núcleo del sistema operativo Linux</a>. Git es además <a href='http://es.wikipedia.org/wiki/Software_libre'>software libre</a> publicado bajo la licencia <a href='https://gnu.org/licenses/old-licenses/lgpl-2.0.html'>GPL v2</a>.
 
@@ -25,6 +25,8 @@ Para más información acerca de Git puedes consultar <a href='http://git-scm.co
 
 Github
 ------
+
+<a href='https://github.com/'><img src='images/github/github-github_logo.png' alt='github' title='github'/></a>
 
 Github es un servicio web que te permite alojar el código fuente de tus proyectos, y utiliza git como sistema de control de versiones. Pero la principal característica de Github es que provee una plataforma social para el desarrollo de aplicaciones, permitiéndote publicar tus proyectos, seguir aquéllos que te interesan, colaborar con proyectos existentes y toda una serie de servicios sumamente útiles para trabajar de manera colaborativa.
 
