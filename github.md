@@ -1,7 +1,7 @@
 Introducción a git y github
 ===========================
 
-tl;dr (está bien, ya conozco la teoría, quiero el resumen ayuda-memoria)
+<a href='#resumen'>tl;dr</a> (está bien, ya conozco la teoría, quiero el <a href='#resumen'>resumen</a> ayuda-memoria)
 
 Sistemas de control de versiones
 --------------------------------
@@ -354,7 +354,7 @@ Por último, les dejamos un resumen ayuda-memoria para los más ansiosos, con al
 
 -------------
 
-*Instalar git*
+<a name='tldr'>*Instalar git*</a>
 
 En distros basadas en debian:
 
