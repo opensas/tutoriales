@@ -30,7 +30,7 @@ Github
 
 Github es un servicio web que te permite alojar el código fuente de tus proyectos, utilizando git como sistema de control de versiones. Pero la principal característica de Github es que provee una plataforma social para el desarrollo de aplicaciones, permitiéndote publicar tus proyectos, seguir aquéllos que te interesan, colaborar con proyectos existentes y toda una serie de servicios sumamente útiles para trabajar de manera colaborativa.
 
-Muchos lo describen como 'el Facebook de los desarrolladores', pero últimamente su uso alcanza a otras profesiones, y hacia principios de 2013 ya contaba con más de tres millones de usuarios y más de cinco millones de repositorios (<a href='https://en.wikipedia.org/wiki/GitHub#cite_ref-27'>ver cita</a>).
+Muchos lo describen como *el Facebook de los desarrolladores*, pero últimamente su uso alcanza a otras profesiones, y hacia principios de 2013 ya contaba con más de tres millones de usuarios y más de cinco millones de repositorios (<a href='https://en.wikipedia.org/wiki/GitHub#cite_ref-27'>ver cita</a>).
 
 Manos a la obra
 ===============
@@ -68,7 +68,7 @@ $ git config --global user.email mi_mail@ejemplo.com
 
 Esto es importante ya que cada vez que confirmes un cambio (commit) esta información será almacenada por git para tener registro de qué persona hizo cada cambio. A su vez, github utiliza esta cuenta de correo para asociar cada cambio con tu cuenta de github, así que tenés que configurar la misma cuenta de correo que vayas a utilizar para registrar tu cuenta en github.
 
-Para este tutorial utilizaremos el usuario 'hackatoner' y la cuenta de mail 'hackatoner.programar@gmail.com'
+Para este tutorial utilizaremos el usuario *hackatoner* y la cuenta de mail *hackatoner.programar@gmail.com*
 
 ![configurando git](images/github/github-config.png "Configurando git")
 
@@ -87,11 +87,11 @@ $ git config --global push.default simple
 Registrar una cuenta en github
 ------------------------------
 
-Ahora deberás registrar una cuenta en github. Para ello, navegá a https://github.com, ingresá tu nombre de usuario, dirección de correo y una clave, y luego hacé click en 'Sign up for GitHub'.
+Ahora deberás registrar una cuenta en github. Para ello, navegá a https://github.com, ingresá tu nombre de usuario, dirección de correo y una clave, y luego hacé click en *Sign up for GitHub*.
 
 ![Github signin](images/github/github-signin.png "Github signin")
 
-En nuestro caso elegiremos como nombre 'hackatoner', y nuestra dirección de correo será 'hackatoner.programar@gmail.com'.
+En nuestro caso elegiremos como nombre *hackatoner*, y nuestra dirección de correo será *hackatoner.programar@gmail.com*.
 
 Luego de registrar nuestra cuenta veremos la pantalla principal de github.
 
@@ -111,8 +111,6 @@ Hacemos click en 'New repository' y completamos la información de nuestro proye
 Deberemos ingresar un nombre, una descripción y elegir una licencia. También es buena idea inicializar nuestro repositorio con un archivo README (Léame) en el cual expliquemos de qué se trata el proyecto.
 
 Luego hacemos click en *Create repository*. Veremos que github ha creado el proyecto con la licencia que le especificamos y un archivo léame con el comentario que ingresamos
-
-Luego hacemos click en _Create repository_. Veremos que github ha creado el proyecto con la licencia que le especificamos y un archivo léame con el comentario que ingresamos
 
 ![Mi primer proyecto en github](images/github/github-mi_primer_proyecto.png "Mi primer proyecto en github")
 
@@ -137,7 +135,7 @@ Ahora tendremos que abrir una consola, y decirle a git que clone este repositori
 $ git clone https://github.com/hackatoner/mi_primer_proyecto.git
 ```
 
-En nuestro caso creamos un directorio 'proyectos' en nuestro directorio de usuario. Vemos como git creó a su vez un directorio 'mi_primer_proyecto' y trajo además los archivos del mismo.
+En nuestro caso creamos un directorio *proyectos* en nuestro directorio de usuario. Vemos como git creó a su vez un directorio *mi_primer_proyecto* y trajo además los archivos del mismo.
 
 ![Clonando un repo localmente](images/github/github-local_clone.png "Clonando un repo localmente")
 
@@ -310,7 +308,7 @@ Si volvemos a nuestro sitio en github, veremos que que se ha agregado el archivo
 
 ![Nuestro repo luego de hacer un push](images/github/github-after_push.png "Nuestro repo luego de hacer un push")
 
-Además, si hacemos clicks en 'commits' podemos ver la lista de commits:
+Además, si hacemos clicks en *commits* podemos ver la lista de commits:
 
 ![Viendo los commits en github](images/github/github-commit_list.png "Viendo los commits en github")
 
