@@ -66,7 +66,7 @@ Esto es importante ya que cada vez que confirmes un cambio (commit) esta informa
 
 Para este tutorial utilizaremos el usuario 'hackatoner' y la cuenta de mail 'hackatoner.programar@gmail.com'
 
-![configurando git](images/github/github_config.png "Configurando git")
+![configurando git](images/github/github-config.png "Configurando git")
 
 Nota: También incluiremos esta configuración evitar un mensaje bastante molesto que git emite y para que tenga un comportamiento más conservador a la hora de actualizar ramas remotas. Para más información podés consultar <a href='http://stackoverflow.com/a/13148313/47633'>esta respuesta</a> en stackoverflow.
 
@@ -79,61 +79,64 @@ Registrar una cuenta en github
 
 Ahora deberás registrar una cuenta en github. Para ello, navegá a https://github.com, ingresá tu nombre de usuario, dirección de correo y una clave, y luego hacé click en 'Sign up for GitHub'.
 
-picture github-signin.com
+![Github signin](images/github/github-signin.png "Github signin")
 
-En nuestro caso elegimos como nombre hackatoner, y nuestra dirección de correo es hackatoner.programar@gmail.com.
+En nuestro caso elegiremos como nombre 'hackatoner', y nuestra dirección de correo será 'hackatoner.programar@gmail.com'.
 
 Luego de registrar nuestra cuenta veremos la pantalla principal de github.
 
-picture github homepage
+![Github homepage](images/github/github-homepage.png "Github homepage")
 
 Creando nuestro primer proyecto
 -------------------------------
 
 Abajo a la derecha, veremos que todavía no contamos con ningún repositorio. Vamos a crear nuestro primer proyecto.
 
+![Tus repos en github](images/github/github-your_repos.png "Tus repos en github")
 github - your repositories
 
 Hacemos click en 'New repository' y completamos la información de nuestro proyecto.
 
-github - create a new repo
+![Creando un nuevo repo](images/github/github-create_a_new_repo.png "Creando un nuevo repo")
 
-Deberemos elegir un nombre, ingresar una descripcióny elegir una licencia. También es buena idea inicializar nuestro repositorio con un archivo README (Léame) en el cual expliquemos de qué se trata el proyecto.
+Deberemos ingresar un nombre, una descripción y elegir una licencia. También es buena idea inicializar nuestro repositorio con un archivo README (Léame) en el cual expliquemos de qué se trata el proyecto.
 
-Luego hacemos click en 'Create repository'. Veremos que github ha creado el proyecto con la licencia que le especificamos y un archivo leame con el comentario que ingresamos
+Luego hacemos click en 'Create repository'. Veremos que github ha creado el proyecto con la licencia que le especificamos y un archivo léame con el comentario que ingresamos
 
-github - mi primer proyecto
+![Mi primer proyecto en github](images/github/github-mi_primer_proyecto.png "Mi primer proyecto en github")
 
-También github ha creado para nosotros un url: https://github.com/hackatoner/mi_primer_proyecto. Esta es la dirección de nuestro proyecto en github, y a través de esa dirección el resto del mundo puede ver nuestro proyecto, seguirlo, controlar nuestros avances, copiárselo localmente para mejorarlo, y colaborar con nosotros.
+Github tTambién ha creado para nosotros un url: https://github.com/hackatoner/mi_primer_proyecto. Esta es la dirección de nuestro proyecto en github, y a través de ella el resto del mundo puede ver nuestro proyecto, seguirlo, controlar nuestros avances, copiárselo localmente para mejorarlo, y colaborar con nosotros.
 
 Clonando localmente nuestro repositorio
+---------------------------------------
 
-Sin embargo, no podemos hacer todo en la web. Para poder trabajar en nuestro proyecto, debemos disponer de los archivos localmente en nuestra estación de trabajo. Por eso lo que haremos será copiarnos el repositorio entero (con su historial de cambios) en nuestra estación de trabajo.
+Sin embargo, no podemos hacer todo en la web. Para poder trabajar en nuestro proyecto, debemos disponer de los archivos localmente en nuestro equipo. Por eso lo que haremos será copiarnos el repositorio entero (con su historial de cambios) en nuestra estación de trabajo.
 
-Recuerda que git es un sistema de control de versiones distribuido, por eso cada copia del repositorio es totalmente autónoma. En la jerga de git, hablamos de 'clonar' un repositorio cuando queremos hacer una copia. El nuevo respositorio mantiene una referencia al repositorio original, lo que nos permite luego enviar y scinronizar los cambios.
+Git es un sistema de control de versiones distribuido, por eso cada copia del repositorio es totalmente autónoma. En la jerga de git, hablamos de 'clonar' un repositorio cuando queremos hacer una copia. El nuevo respositorio mantiene una referencia al repositorio original, lo que nos permite luego enviar y scinronizar los cambios.
 
 Para clonar localmente nuestro repositorio debemos copiar la dirección que se encuentra en la parte inferior derecha de la página de nuestro proyecto:
 
-github clone repo
+![Clonando un repo](images/github/github-clone_repo.png "Clonando un repo")
 
 En nuestro caso el url para clonar nuestro flamante repositorio es: https://github.com/hackatoner/mi_primer_proyecto.git
 
-Nota: Hay otros métodos para comunicarte con repositorios de github. En <a href='https://help.github.com/articles/generating-ssh-keys'>este artículo</a> puedes ver cómo establecer una conexion segura con github utilizando SSH, para ello deberás crear un par de claves pública-privada, agregar tu clave pública a github y luego podrás usar el url de la forma git@github.com:hackatoner/mi_primer_proyecto.git.
-
+> Hay otros métodos para comunicarte con repositorios de github. En <a href='https://help.github.com/articles/generating-ssh-keys'>este artículo</a> puedes ver cómo establecer una conexion segura con github utilizando SSH, para ello deberás crear un par de claves pública-privada, agregar tu clave pública a github y luego podrás usar el url de la forma git@github.com:hackatoner/mi_primer_proyecto.git.
 
 Ahora tendremos que abrir una consola, y decirle a git que clone este repositorio:
 
+```
 $ git clone https://github.com/hackatoner/mi_primer_proyecto.git
+```
 
 En nuestro caso creamos un directorio 'proyectos' en nuestro directorio de usuario. Vemos como git creó a su vez un directorio 'mi_primer_proyecto' y trajo además los archivos del mismo.
 
-github local clone
+![Clonando un repo localmente](images/github/github-local_clone_repo.png "Clonando un repo localmente")
 
 Flujo de trabajo con git
+------------------------
 
-http://git-scm.com/book/es/Fundamentos-de-Git-Guardando-cambios-en-el-repositorio
 
-Es importante entender el flujo de trabajo con git. Los arhivos en un repositorio pueden estar bajo seguimiento (tracked) o sin seguimiento (untracked). Cuando nos clonamos un repositorio todos los archivos estarán inicialmente bajo seguimiento de control (tracked).
+Es importante entender <a href='http://git-scm.com/book/es/Fundamentos-de-Git-Guardando-cambios-en-el-repositorio'>el flujo de trabajo con git</a>. Los arhivos en un repositorio pueden estar bajo seguimiento (tracked) o sin seguimiento (untracked). Cuando clonamos un repositorio todos los archivos estarán inicialmente bajo seguimiento de control (tracked).
 
 Los archivos bajo seguimiento (tracked) pueden estar sin modificaciones (unmodified), con modificaciones (modified), o preparados para ser grabados (staged).
 
@@ -141,16 +144,19 @@ Cada vez que querramos confirmar algún cambio en el repositorio, deberemos prep
 
 Este flujo de trabajo se ve reflejado en el siguiente cuadro:
 
-http://git-scm.com/figures/18333fig0201-tn.png
+![Flujo de trabajo con git](http://git-scm.com/figures/18333fig0201-tn.png "Flujo de trabajo con git")
 
-Vamos a verlo con un ejemplo práctico. Mediante el comando git status podemos ver el estado de los archivos en nuestro directorio de trabajo.
+Vamos a verlo con un ejemplo práctico. Mediante el comando 'git status' podemos ver el estado de los archivos en nuestro directorio de trabajo.
 
+```
 $ git status
 # En la rama master
 nothing to commit, working directory clean
+```
 
 Lo que haremos a continuación es editar localmente el archivo README.md. Podés utilizar cualquier editor de texto, en nuestro caso utilizaremos gedit.
 
+```
 $ cd mi_primer_proyecto
 $ gedit README.md
 
@@ -158,9 +164,11 @@ mi_primer_proyecto
 ==================
 
 Este es un proyecto de prueba para aprender a utilizar git y github.
+```
 
 También agregaremos un archivo html.
 
+```
 $ gedit index.html
 
 <html>
@@ -168,9 +176,11 @@ $ gedit index.html
     <h1>Bienvenido a mi primer proyecto</h1>
   </body>
 </html>
+```
 
-Veamos ahora qué nos retorna el comando git status:
+Veamos ahora qué nos retorna el comando 'git status':
 
+```
 $ git status
 # En la rama master
 # Cambios no preparados para el commit:
@@ -184,11 +194,13 @@ $ git status
 #
 # index.html
 no hay cambios agregados al commit (use «git add» o «git commit -a»)
+```
 
 Nos indica que el archivo README.md está modificado (modified) pero que no está preparado (staged) para ser confirmado. También nos indica que el archivo index.html está sin seguimiento. Por última nos indica que no hay ningún cambio para ser grabado (staged).
 
 Mediante el comando 'git add' indicaremos qué archivos queremos preparar (stage) para ser grabados en el próximo commit.
 
+```
 $ git add README.md
 $ git status
 # En la rama master
@@ -201,9 +213,11 @@ $ git status
 #   (use «git add <archivo>...» para incluir lo que se ha de ejecutar)
 #
 # index.html
+```
 
 Ahora vemos como el archivo README.md está listo para ser confirmado. Entonces lo vamos a confirmar con el comando 'git commit'. Cada vez que hagamos un commit debemos incluir un mensaje mediante el parámetro -m, e la siguiente manera:
 
+```
 $ git commit -m 'completamos el archivo README.md'
 [master 981d17b] completamos el archivo README.md
  1 file changed, 1 insertion(+), 1 deletion(-)
@@ -218,9 +232,11 @@ $ git status
 #
 # index.html
 no se ha agregado nada al commit pero existen archivos sin seguimiento (use «git add» para darle seguimiento)
+```
 
 De la misma manera, preparamos (stage) y confirmamos (commit) el archivo index.html:
 
+```
 $ git add index.html
 
 $ git commit -m 'creamos pagina html de bienvenida'
@@ -233,17 +249,21 @@ hackatoner@station:~/proyectos/mi_primer_proyecto$ git status
 #   (use "git push" to publish your local commits)
 #
 nothing to commit, working directory clean
+```
 
-Vemos que git nos indica que nuestra rama de trabajo está dos commits por delante de origin/master. Como habíamos dicho, nuestro repositorio mantiene una referencia al repositorio original. Esto lo podemos ver mediante el siguiente comando:
+Vemos que git nos indica que nuestra rama de trabajo está dos commits por delante de origin/master. Como habíamos dicho, nuestro repositorio mantiene una referencia al repositorio original. Esto lo podemos comprobar mediante el siguiente comando:
 
+```
 $ git remote -v
 origin  https://github.com/hackatoner/mi_primer_proyecto.git (fetch)
 origin  https://github.com/hackatoner/mi_primer_proyecto.git (push)
+```
 
 Lo que tenemos que hacer ahora es enviar los cambios que acabamos de confirmar (commit) en nuestro repositorio local a nuestro repositorio remoto en github. Haremos esto mediante el comando 'git push'.
 
 Nota: debido a que estamos utilizando el url https, git nos pedirá nuestro nombre de usuario y password de github.
 
+```
 $ git push
 Username for 'https://github.com': hackatoner
 Password for 'https://hackatoner@github.com': xxxxxx
@@ -254,25 +274,28 @@ Writing objects: 100% (6/6), 670 bytes, done.
 Total 6 (delta 1), reused 0 (delta 0)
 To https://github.com/hackatoner/mi_primer_proyecto.git
    194a26c..d6d9019  master -> master
+```
 
 Si volvemos a nuestro sitio en github, veremos que que se ha agregado el archivo index.html, y que el archivo README.md fue modificado
 
-picture github post push
+![Nuestro repo luego de hacer un push](images/github/github-after_push.png "Nuestro repo luego de hacer un push")
 
 Además, si hacemos clicks en 'commits' podemos ver la lista de commits:
 
-picture github - commit list
+![Viendo los commits en github](images/github/github-commit_list.png "Viendo los commits en github")
 
 Y haciendo click en cada uno de ellos podemos ver el detalle de los cambios efectuados, y quién los hizo:
 
-picture github - review a commit
+![Detalle de un commit en github](images/github/github-review_a_commit_list.png "Detalle de un commit en github")
 
 Manteniendo nuestro repositorio local actualizado
+-------------------------------------------------
 
 A veces pasará que nuestro repositorio remoto de github está más actualizado que nuestro repositorio local. Esto puede ocurrir cuando utilizamos otra máquina para desarrollar, o cuando hay más de una persona trabajando sobre el mismo repositorio.
 
 Para ello utilizamos el comando 'git pull' para traernos los últimos cambios del repositorio remoto en github a nuestro repositorio local en nuestra estación de trabajo.
 
+```
 $ git pull
 remote: Counting objects: 5, done.
 remote: Compressing objects: 100% (3/3), done.
@@ -284,12 +307,14 @@ Updating d6d9019..8f9e950
 Fast-forward
  README.md | 2 ++
  1 file changed, 2 insertions(+)
+```
 
 En este caso, git nos dice que el archivo README.md fue actualizado.
 
 Nota: en este artículo hemos trabajado exclusivamente desde la línea de comandos, sin embargo existen varias herramientas visuales que nos facilitan la tarea (una herramienta muy recomendable es <a href='http://www.syntevo.com/smartgithg/'>SmartGit</a>). Sin embargo, es recomendable trabajar un buen tiempo desde la línea de comandos para aprender bien los conceptos básicos antes de adoptar una herramienta visual.
 
 Conclusión
+==========
 
 La combinación de git más github nos brinda herramientas sumamente poderosas para gestionar archivos y trabajar colaborativamente.
 
@@ -299,53 +324,70 @@ Para más información no dejen de leer el libro <a href='http://git-scm.com/boo
 
 Por último, les dejamos un resumen ayuda-memoria para los más ansiosos:
 
---
+-------------
 
-Instalar git
+*Instalar git*
 
-debian:
+En distros basadas en debian:
 
+```
 sudo apt-get install git
+```
 
-rpm:
+En distros basadas en rpm:
 
+```
 yum install git-core
+```
 
+*Configurar git*
 
-Configurar git
-
+```
 $ git config --global user.name "mi nombre de usuario"
 $ git config --global user.email mi_mail@ejemplo.com
 $ git config --global push.default simple
+```
 
-Registrar una cuenta en github
+*Registrar una cuenta en github*
 
 Navegá a navegá a <a href='https://github.com/'>https://github.com</a> y completá la información
 
-Crear un nuevo repositorio
+*Crear un nuevo repositorio*
 
 Ingresá a github con tu cuenta, hacé click en 'Repositories' y luego 'New', o simplemente navegá a <a href='https://github.com/new'>https://github.com/new</a>.
 
-Clonarte el repositorio localmente
+*Clonarte el repositorio localmente*
 
+```
 git clone https://github.com/mi_usuario/mi_proyecto.git
+```
 
-Consultar el estado de los archivos
+*Consultar el estado de los archivos*
 
+```
 git status
+```
 
-Agregar archivos para ser confirmados (stage)
+*Agregar archivos para ser confirmados (stage)*
 
+```
 git add <archivo>
+```
 
-Confirmar (commit) archivos
+*Confirmar (commit) archivos*
 
+```
 git commit -m 'mensaje del commit'
+```
 
-Enviar los cambios de mi repositorio local al repositorio remoto en github
+*Enviar los cambios de mi repositorio local al repositorio remoto en github*
 
+```
 git push
+```
 
-Actualizar mi repositorio local con los cambios del repositorio de github
+*Actualizar mi repositorio local con los cambios del repositorio de github*
 
+```
 git pull
+```
