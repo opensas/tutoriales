@@ -354,7 +354,9 @@ Por último, les dejamos un resumen ayuda-memoria para los más ansiosos, con al
 
 -------------
 
-<a name='tldr'>*Instalar git*</a>
+<a name='tldr'>##Resumen para ansiosos</a>
+
+*Instalar git*
 
 En distros basadas en debian:
 
