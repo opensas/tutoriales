@@ -93,7 +93,6 @@ Creando nuestro primer proyecto
 Abajo a la derecha, veremos que todavía no contamos con ningún repositorio. Vamos a crear nuestro primer proyecto.
 
 ![Tus repos en github](images/github/github-your_repos.png "Tus repos en github")
-github - your repositories
 
 Hacemos click en 'New repository' y completamos la información de nuestro proyecto.
 
@@ -105,14 +104,12 @@ Luego hacemos click en 'Create repository'. Veremos que github ha creado el proy
 
 ![Mi primer proyecto en github](images/github/github-mi_primer_proyecto.png "Mi primer proyecto en github")
 
-Github tTambién ha creado para nosotros un url: https://github.com/hackatoner/mi_primer_proyecto. Esta es la dirección de nuestro proyecto en github, y a través de ella el resto del mundo puede ver nuestro proyecto, seguirlo, controlar nuestros avances, copiárselo localmente para mejorarlo, y colaborar con nosotros.
+Github también ha creado para nosotros un url: https://github.com/hackatoner/mi_primer_proyecto. Esta es la dirección de nuestro proyecto en github, y a través de ella el resto del mundo puede ver nuestro proyecto, seguirlo, controlar nuestros avances, copiárselo localmente para mejorarlo, y colaborar con nosotros.
 
 Clonando localmente nuestro repositorio
 ---------------------------------------
 
-Sin embargo, no podemos hacer todo en la web. Para poder trabajar en nuestro proyecto, debemos disponer de los archivos localmente en nuestro equipo. Por eso lo que haremos será copiarnos el repositorio entero (con su historial de cambios) en nuestra estación de trabajo.
-
-Git es un sistema de control de versiones distribuido, por eso cada copia del repositorio es totalmente autónoma. En la jerga de git, hablamos de 'clonar' un repositorio cuando queremos hacer una copia. El nuevo respositorio mantiene una referencia al repositorio original, lo que nos permite luego enviar y scinronizar los cambios.
+Para poder trabajar en nuestro proyecto, debemos disponer de los archivos localmente en nuestro equipo. Por eso lo que haremos será copiarnos (clonar en la jerga de git) el repositorio entero, junto con su historial de cambios) en nuestra estación de trabajo.
 
 Para clonar localmente nuestro repositorio debemos copiar la dirección que se encuentra en la parte inferior derecha de la página de nuestro proyecto:
 
@@ -130,17 +127,16 @@ $ git clone https://github.com/hackatoner/mi_primer_proyecto.git
 
 En nuestro caso creamos un directorio 'proyectos' en nuestro directorio de usuario. Vemos como git creó a su vez un directorio 'mi_primer_proyecto' y trajo además los archivos del mismo.
 
-![Clonando un repo localmente](images/github/github-local_clone_repo.png "Clonando un repo localmente")
+![Clonando un repo localmente](images/github/github-local_clone.png "Clonando un repo localmente")
 
 Flujo de trabajo con git
 ------------------------
 
-
 Es importante entender <a href='http://git-scm.com/book/es/Fundamentos-de-Git-Guardando-cambios-en-el-repositorio'>el flujo de trabajo con git</a>. Los arhivos en un repositorio pueden estar bajo seguimiento (tracked) o sin seguimiento (untracked). Cuando clonamos un repositorio todos los archivos estarán inicialmente bajo seguimiento de control (tracked).
 
-Los archivos bajo seguimiento (tracked) pueden estar sin modificaciones (unmodified), con modificaciones (modified), o preparados para ser grabados (staged).
+Los archivos bajo seguimiento (tracked) pueden estar sin modificaciones (unmodified) con modificaciones (modified), o preparados para ser grabados (staged).
 
-Cada vez que querramos confirmar algún cambio en el repositorio, deberemos preparar el archivo (pasarlo a stage), luego de lo cual grabaremos los cambios (commit) de todos los archivos que estaban preparados. En ese momento, los cambios se grabarán en el repositorio como un nuevo commit, y los archivos pasaran a estado sin modificaciones.
+Cada vez que querramos confirmar algún cambio en el repositorio, deberemos preparar el archivo (pasarlo a stage), luego de lo cual grabaremos los cambios (commit) de todos los archivos que estaban preparados. En ese momento, los cambios se grabarán en el repositorio como un nuevo commit, y los archivos volverán a estado sin modificaciones.
 
 Este flujo de trabajo se ve reflejado en el siguiente cuadro:
 
@@ -196,7 +192,7 @@ $ git status
 no hay cambios agregados al commit (use «git add» o «git commit -a»)
 ```
 
-Nos indica que el archivo README.md está modificado (modified) pero que no está preparado (staged) para ser confirmado. También nos indica que el archivo index.html está sin seguimiento. Por última nos indica que no hay ningún cambio para ser grabado (staged).
+Aquí podemos ver que el archivo README.md está modificado (modified) pero no está preparado (staged) para ser confirmado. También vemos que el archivo index.html está sin seguimiento.
 
 Mediante el comando 'git add' indicaremos qué archivos queremos preparar (stage) para ser grabados en el próximo commit.
 
@@ -215,7 +211,7 @@ $ git status
 # index.html
 ```
 
-Ahora vemos como el archivo README.md está listo para ser confirmado. Entonces lo vamos a confirmar con el comando 'git commit'. Cada vez que hagamos un commit debemos incluir un mensaje mediante el parámetro -m, e la siguiente manera:
+Ahora vemos que el archivo README.md está listo para ser confirmado. Para grabarlo (commit) utilizaremos el comando 'git commit'. Cada vez que hagamos un commit debemos incluir un mensaje mediante el parámetro -m, de la siguiente manera:
 
 ```
 $ git commit -m 'completamos el archivo README.md'
@@ -251,7 +247,7 @@ hackatoner@station:~/proyectos/mi_primer_proyecto$ git status
 nothing to commit, working directory clean
 ```
 
-Vemos que git nos indica que nuestra rama de trabajo está dos commits por delante de origin/master. Como habíamos dicho, nuestro repositorio mantiene una referencia al repositorio original. Esto lo podemos comprobar mediante el siguiente comando:
+Vemos que git nos indica que nuestra rama de trabajo está dos commits por delante de origin/master. Cada vez que clonamos un repositorio, creamos un nuevo repositorio que tiene a su vez una referencia al repositorio original. Esto lo podemos comprobar mediante el siguiente comando:
 
 ```
 $ git remote -v
@@ -261,7 +257,7 @@ origin  https://github.com/hackatoner/mi_primer_proyecto.git (push)
 
 Lo que tenemos que hacer ahora es enviar los cambios que acabamos de confirmar (commit) en nuestro repositorio local a nuestro repositorio remoto en github. Haremos esto mediante el comando 'git push'.
 
-Nota: debido a que estamos utilizando el url https, git nos pedirá nuestro nombre de usuario y password de github.
+> Debido a que estamos utilizando el url https, git nos pedirá nuestro nombre de usuario y password de github.
 
 ```
 $ git push
@@ -284,9 +280,9 @@ Además, si hacemos clicks en 'commits' podemos ver la lista de commits:
 
 ![Viendo los commits en github](images/github/github-commit_list.png "Viendo los commits en github")
 
-Y haciendo click en cada uno de ellos podemos ver el detalle de los cambios efectuados, y quién los hizo:
+Y haciendo click en cada uno de ellos podemos ver el detalle de los cambios efectuados y quién fue el usuario que los hizo:
 
-![Detalle de un commit en github](images/github/github-review_a_commit_list.png "Detalle de un commit en github")
+![Detalle de un commit en github](images/github/github-review_a_commit.png "Detalle de un commit en github")
 
 Manteniendo nuestro repositorio local actualizado
 -------------------------------------------------
@@ -311,7 +307,7 @@ Fast-forward
 
 En este caso, git nos dice que el archivo README.md fue actualizado.
 
-Nota: en este artículo hemos trabajado exclusivamente desde la línea de comandos, sin embargo existen varias herramientas visuales que nos facilitan la tarea (una herramienta muy recomendable es <a href='http://www.syntevo.com/smartgithg/'>SmartGit</a>). Sin embargo, es recomendable trabajar un buen tiempo desde la línea de comandos para aprender bien los conceptos básicos antes de adoptar una herramienta visual.
+> en este artículo hemos trabajado exclusivamente desde la línea de comandos, sin embargo existen varias herramientas visuales que nos facilitan la tarea (una herramienta muy recomendable es <a href='http://www.syntevo.com/smartgithg/'>SmartGit</a>). Sin embargo, es recomendable trabajar un buen tiempo desde la línea de comandos para aprender bien los conceptos básicos antes de adoptar una herramienta visual.
 
 Conclusión
 ==========
