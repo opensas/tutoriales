@@ -1,7 +1,7 @@
 Introducción a git y github
 ===========================
 
-<a href='#resumen'>tl;dr</a> (está bien, ya conozco la teoría, quiero el <a href='#resumen'>resumen</a> ayuda-memoria)
+<a href='#tldr'>tl;dr</a> (está bien, ya conozco la teoría, quiero el <a href='#tldr'>resumen</a> ayuda-memoria)
 
 Sistemas de control de versiones
 --------------------------------
