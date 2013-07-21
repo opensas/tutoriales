@@ -108,7 +108,7 @@ Hacemos click en 'New repository' y completamos la información de nuestro proye
 
 ![Creando un nuevo repo](images/github/github-create_a_new_repo.png "Creando un nuevo repo")
 
-Deberemos ingresar un nombre, una descripción y elegir una licencia. También es buena idea inicializar nuestro repositorio con un archivo README (Léame) en el cual expliquemos de qué se trata el proyecto.
+Deberemos ingresar un nombre, una descripción y elegir una licencia. También es buena idea inicializar nuestro repositorio con un archivo *README* (Léame) en el cual expliquemos de qué se trata el proyecto.
 
 Luego hacemos click en *Create repository*. Veremos que github ha creado el proyecto con la licencia que le especificamos y un archivo léame con el comentario que ingresamos
 
@@ -304,7 +304,7 @@ To https://github.com/hackatoner/mi_primer_proyecto.git
    194a26c..d6d9019  master -> master
 ```
 
-Si volvemos a nuestro sitio en github, veremos que que se ha agregado el archivo index.html, y que el archivo README.md fue modificado
+Si volvemos a nuestro sitio en github, veremos que se ha agregado el archivo index.html y que el archivo README.md fue modificado
 
 ![Nuestro repo luego de hacer un push](images/github/github-after_push.png "Nuestro repo luego de hacer un push")
 
@@ -461,16 +461,18 @@ git pull
 
 Material de referecia:
 
-[Pro Git](http://git-scm.com/book/es/)
+[Libro Pro Git en castellano](http://git-scm.com/book/es/)
+
+-   [Instalando git](http://git-scm.com/book/es/Empezando-Instalando-Git#Instalando-en-Linux)
+
+-   [Configurando git](http://git-scm.com/book/es/Empezando-Configurando-Git-por-primera-vez)
+
+-   [Guardando cambios en el repositorio](http://git-scm.com/book/es/Fundamentos-de-Git-Guardando-cambios-en-el-repositorio)
+
+---
 
 [Tutorial de Git en inglés](http://nyuccl.org/pages/GitTutorial/)
 
-[Machete](http://www.git-tower.com/files/cheatsheet/Git_Cheat_Sheet_grey.pdf)
+[Machete ayuda-memoria con los comandos más comunes](http://www.git-tower.com/files/cheatsheet/Git_Cheat_Sheet_grey.pdf)
 
 [Tutorial en Castellano](http://www.ptydev.com/tutoriales/tutorial-basico-de-git)
-
-[Instalando git](http://git-scm.com/book/es/Empezando-Instalando-Git#Instalando-en-Linux)
-
-[Configurando git](http://git-scm.com/book/es/Empezando-Configurando-Git-por-primera-vez)
-
-[Guardando cambios en el repositorio](http://git-scm.com/book/es/Fundamentos-de-Git-Guardando-cambios-en-el-repositorio)
