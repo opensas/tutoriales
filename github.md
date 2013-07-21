@@ -354,7 +354,7 @@ Por último, les dejamos un resumen ayuda-memoria para los más ansiosos, con al
 
 -------------
 
-<a name='tldr'>## Resumen para ansiosos</a>
+<a name='tldr'><h2>Resumen para ansiosos</h2></a>
 
 *Instalar git*
 
