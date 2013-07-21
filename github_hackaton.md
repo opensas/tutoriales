@@ -1,8 +1,9 @@
+![Portal de datos publicos](images/portal/banner_portal_datos.png)
 
 Cómo publicar tu aplicación en github
 =====================================
 
-Para participar del hackaton de datos programAR necesitarás publicar tu trabajo publicar tu trabajo en un repositorio de github bajo una [licencia libre](http://www.gnu.org/licenses/license-list.html#GPLCompatibleLicenses) reconocida por la [Free Software Foundation](http://www.fsf.org/), como la [GPLv3](http://www.gnu.org/licenses/gpl.html).
+Para participar del hackaton de datos programAR necesitarás publicar tu trabajo en un repositorio de github bajo una [licencia libre](http://www.gnu.org/licenses/license-list.html#GPLCompatibleLicenses) reconocida por la [Free Software Foundation](http://www.fsf.org/), como la [GPLv3](http://www.gnu.org/licenses/gpl.html).
 
 Aquí te explicaremos cómo hacerlo
 
@@ -21,12 +22,14 @@ Si estás usando Fedora (o cualquier otra distribución que use paquetes rpm) de
 $ yum install git-core
 ```
 
-Luego deberás [configurar git](http://git-scm.com/book/es/Empezando-Configurando-Git-por-primera-vez). Ingresa los siguientes comandos para configurar tu nombre de usuario y dirección de correo electrónico.
+Luego deberás [configurar git](http://git-scm.com/book/es/Empezando-Configurando-Git-por-primera-vez). Ingresá los siguientes comandos para configurar tu nombre de usuario y dirección de correo electrónico.
 
 ```
 $ git config --global user.name "mi nombre de usuario"
 $ git config --global user.email mi_mail@ejemplo.com
 ```
+
+> Tené en cuenta que tenés que usar la misma dirección de correo que la que vas a usar en github.
 
 Y agregar también las siguientes configuraciones para git te muestre la salida en pantalla utilizando colores y para establecer cómo queremos que git actualize ramas remotas (más información <a href='http://stackoverflow.com/a/13148313/47633'>aquí</a>):
 
@@ -42,11 +45,9 @@ Para registrar una cuenta en github navegá a https://github.com, ingresá tu no
 
 ![Github signin](images/github/github-signin.png "Github signin")
 
-Para crear nuestr proyecto, hacemos click en 'New repository', abajo a la derecha, y completamos la información de nuestro proyecto.
-![Tus repos en github](images/github/github-your_repos.png "Tus repos en github")
+Para crear nuestro proyecto, hacemos click en 'New repository', abajo a la derecha, y completamos la información de nuestro proyecto.
 
 ![Creando un nuevo repo](images/github/github-create_a_new_repo.png "Creando un nuevo repo")
-Creando nuestro primer proyecto
 
 Aseguráte de elegir una licencia libre para tu proyecto. Si tenés alguna duda la [GPLv3](http://www.gnu.org/licenses/gpl.html) será suficiente.
 
@@ -54,14 +55,14 @@ Luego hacemos click en *Create repository*.
 
 ![Mi primer proyecto en github](images/github/github-mi_primer_proyecto.png "Mi primer proyecto en github")
 
-Github también ha creado para nosotros un url, en este ejemplo: https://github.com/hackatoner/mi_primer_proyecto. Esta es la dirección de nuestro proyecto en github que deberás informar a los organizadores del hackton.
+Github también ha creado para nosotros una url, en este ejemplo: https://github.com/hackatoner/mi_primer_proyecto. Esta es la dirección de tu proyecto en github que deberás informar a los organizadores del hackton.
 
 Clonando localmente nuestro repositorio
 ---------------------------------------
 
 Para trabajar en tu proyecto deberás clonar el repositorio de github en tu estación de trabajo.
 
-Copiá la dirección que se encuentra en la parte inferior derecha de la página de nuestro proyecto:
+Copiá la dirección que se encuentra en la parte inferior derecha de la página de tu proyecto:
 
 ![Clonando un repo](images/github/github-clone_repo.png "Clonando un repo")
 
@@ -96,7 +97,7 @@ $ git commit -m 'actualizamos el archivo README.md'
  1 file changed, 1 insertion(+), 1 deletion(-)
 ```
 
-Finalmente, para enviar los cambios que acabamos de confirmar (commit) en nuestro repositorio local a nuestro repositorio remoto en github, utiliaremos el comando ```git push```.
+Finalmente, para enviar los cambios que acabamos de confirmar (commit) en nuestro repositorio local a nuestro repositorio remoto en github, utilizaremos el comando ```git push```.
 
 ```
 $ git push
@@ -113,7 +114,7 @@ To https://github.com/hackatoner/mi_primer_proyecto.git
 
 ¡Ya está! Acabás de realizar tu primer commit en github.
 
-Esta es una guía sumamente resumida para que puedas comenzar a trabajar en tu proyecto lo antes posible.
+Esta es una guía resumida para que puedas comenzar a trabajar en tu proyecto lo antes posible.
 
 Si querés una explicación más detallada no dejes de leer [este artículo](github.md).
 

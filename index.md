@@ -1,3 +1,5 @@
+![Portal de datos publicos](images/portal/banner_portal_datos.png)
+
 Material de ayuda para el Hackaton programAR
 ============================================
 
@@ -18,7 +20,7 @@ Y [aquí](github.md) podés consultar una guía más detallada que te explica lo
 
 Inicialmente todas las aplicaciones y visualizaciones que participen del Hackaton aparecerán en la sección *Labs* del Portal de Datos de la Nación, y tanto su alojamiento como correcto funcionamiento será responsabilidad de los propios participantes.
 
-Aquéllas aplicaciones que sean seleccionadas, pasarán a la sección *Apps* del Portal de Datos de la Nación, y serán alojadas en seridores del Estado Nacional.
+Aquéllas aplicaciones que sean seleccionadas, pasarán a la sección *Apps* del Portal de Datos de la Nación, y serán alojadas en servidores del Estado Nacional.
 
 Para alojar tus aplicaciones puedes recurrir a [Github](host_github.md), [OpenShift](host_openshift.md), [Heroku](host_heroku), [Amazon](host_amazon) u otras alternativas.
 
