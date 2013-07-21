@@ -68,6 +68,10 @@ Para este tutorial utilizaremos el usuario 'hackatoner' y la cuenta de mail 'hac
 
 ![configurando git](images/github/github_config.png)
 
+con img
+
+<img src='images/github/github_config.png' width='100px' height='50px' />
+
 Nota: También incluiremos esta configuración evitar un mensaje bastante molesto que git emite y para que tenga un comportamiento más conservador a la hora de actualizar ramas remotas. Para más información podés consultar <a href='http://stackoverflow.com/a/13148313/47633'>esta respuesta</a> en stackoverflow.
 
 ```
@@ -75,8 +79,9 @@ $ git config --global push.default simple
 ```
 
 Registrar una cuenta en github
+------------------------------
 
-Ahora deberás registrar una cuenta en github. Para ello, navegá a <a href='https://github.com/'>https://github.com</a>, ingresá tu nombre de usuario, dirección de correo y una clave, y luego hacé click en 'Sign up got GitHub'.
+Ahora deberás registrar una cuenta en github. Para ello, navegá a https://github.com, ingresá tu nombre de usuario, dirección de correo y una clave, y luego hacé click en 'Sign up for GitHub'.
 
 picture github-signin.com
 
