@@ -174,7 +174,7 @@ Al modificar un archivo que ya estaba bajo seguimiento , también mediante el co
 
 Finalmente, para confirmar los cambios de los archivos preparados (staged) ejecutaremos el comando 'git commit', con lo cual las modificaciones se grabarán en el repositorio, se creará un nuevo commit, y los archivos volverán a estado sin modificaciones (unmodified).
 
-Vamos a verlo con un ejemplo práctico. Mediante el comando 'git status' podemos ver el estado de los archivos en nuestro directorio de trabajo.
+Vamos a verlo con un ejemplo práctico. Mediante el comando ```git status``` podemos ver el estado de los archivos en nuestro directorio de trabajo.
 
 ```
 $ git status
