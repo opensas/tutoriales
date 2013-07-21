@@ -1,10 +1,10 @@
-
 Introducción a git y github
-
+===========================
 
 tl;dr (está bien, ya conozco la teoría, quiero el resumen ayuda-memoria)
 
 Sistemas de control de versiones
+--------------------------------
 
 A la hora de desarrollar una aplicación, un sitio web o una visualización, vamos generando distintos archivos (archivos de código fuente, html, documentación, planillas, hojas de estilo, gráficos, etc) que son los que conformarán nuestro proyecto.
 
@@ -13,6 +13,7 @@ A medida que estos proyectos se vuelven más complejos se torna indispensable po
 Para eso surgieron los <a href='http://es.wikipedia.org/wiki/Control_de_versiones'>sistemas de control de versiones</a>, que nos permiten almacenar los archivos que queremos gestionar, actualizarlos y llevar el registro histórico de las acciones efectuadas sobre cada elemento.
 
 Git
+---
 
 Uno de los sistemas de control de versiones que últimamente ha cobrado gran popularidad es <a href='http://es.wikipedia.org/wiki/Git'>Git</a>. Fue creado por <a href='http://es.wikipedia.org/wiki/Linus_Torvalds'>Linus Torvalds</a> en 2005, para gestionar el código fuente del <a href='http://es.wikipedia.org/wiki/Linux_(núcleo)'>núcleo del sistema operativo Linux</a>. Git es además <a href='http://es.wikipedia.org/wiki/Software_libre'>software libre</a> publicado bajo la licencia <a href='https://gnu.org/licenses/old-licenses/lgpl-2.0.html'>GPL v2</a>.
 
@@ -21,36 +22,45 @@ A diferencia de otros sistemas de control de versiones que cuentan con un reposi
 Para más información acerca de Git puedes consultar <a href='http://git-scm.com/'>su sitio web</a>, en el cual encontrarás también el libreo <a href='http://git-scm.com/book'>Pro Git</a> completo en castellano.
 
 Github
+------
 
 Github es un servicio web que te permite alojar el código fuente de tus proyectos, y utiliza git como sistema de control de versiones. Pero la principal característica de Github es que provee una plataforma social para el desarrollo de aplicaciones, permitiéndote publicar tus proyectos, seguir aquéllos que te interesan, colaborar con proyectos existentes y toda una serie de servicios sumamente útiles para trabajar de manera colaborativa.
 
 Muchos lo describen como 'el Facebook de los desarrolladores', pero últimamente su uso alcanza a otras profesiones, y hacia principios de 2013 ya contaba con más de tres millones de usuarios alojando más de cinco millones de repositorios (<a href='https://en.wikipedia.org/wiki/GitHub#cite_ref-27'>ver cita</a>).
 
-
 Manos a la obra
+===============
 
 Instalando git
+--------------
 
 Lo primero que debemos hacer es <a href='http://git-scm.com/book/es/Empezando-Instalando-Git#Instalando-en-Linux'>instalar git</a> en nuestras estaciones de trabajo.
 
 Si estás utilizando Ubuntu (o cualquier otra distribución basada en Debian) sólo tienes que abrir una ventana de comandos, y ejecutar la siguiente orden:
 
+```
 $ sudo apt-get install git
+```
 
 Si estás usando Fedora (o cualquier otra distribución que usa paquetes rpm) deberás abrir una ventana de comandos e ingresar:
 
+```
 $ yum install git-core
+```
 
 Para probar que git se instaló correctamente ingresa el siguiente comando:
 
+```
 $ git --version
 git version 1.8.1.2
+```
 
+Luego deberás [configurar git](http://git-scm.com/book/es/Empezando-Configurando-Git-por-primera-vez). Ingresa los siguientes comandos para configurar tu nombre de usuario y dirección de correo electrónico.
 
-Luego deberás <a href='http://git-scm.com/book/es/Empezando-Configurando-Git-por-primera-vez'>configurar git</a>. Ingresa los siguientes para configurar tu nombre de usuario y dirección de correo electrónico.
-
+```
 $ git config --global user.name "mi nombre de usuario"
 $ git config --global user.email mi_mail@ejemplo.com
+```
 
 Esto es importante ya que cada vez que confirmes un cambio (commit) esta información será almacenada por git para tener registro de qué persona hizo cada cambio. A su vez, github utiliza esta cuenta de correo para asociar cada cambio con tu cuenta de github, así que tenés que configurar la misma cuenta de correo que vayas a utilizar para registrar tu cuenta en github.
 
@@ -60,8 +70,9 @@ picture: github - config
 
 Nota: También incluiremos esta configuración evitar un mensaje bastante molesto que git emite y para que tenga un comportamiento más conservador a la hora de actualizar ramas remotas. Para más información podés consultar <a href='http://stackoverflow.com/a/13148313/47633'>esta respuesta</a> en stackoverflow.
 
+```
 $ git config --global push.default simple
-
+```
 
 Registrar una cuenta en github
 
@@ -73,9 +84,10 @@ En nuestro caso elegimos como nombre hackatoner, y nuestra dirección de correo 
 
 Luego de registrar nuestra cuenta veremos la pantalla principal de github.
 
-github homepage
+picture github homepage
 
-Creando nuestro primer proyecto.
+Creando nuestro primer proyecto
+-------------------------------
 
 Abajo a la derecha, veremos que todavía no contamos con ningún repositorio. Vamos a crear nuestro primer proyecto.
 
@@ -91,7 +103,7 @@ Luego hacemos click en 'Create repository'. Veremos que github ha creado el proy
 
 github - mi primer proyecto
 
-También github ha creado para nosotros un url: <a href='https://github.com/hackatoner/mi_primer_proyecto'>https://github.com/hackatoner/mi_primer_proyecto</a>. Esta es la dirección de nuestro proyecto en github, y a través de esa dirección el resto del mundo puede ver nuestro proyecto, seguirlo, controlar nuestros avances, copiárselo localmente para mejorarlo, y colaborar con nosotros.
+También github ha creado para nosotros un url: https://github.com/hackatoner/mi_primer_proyecto. Esta es la dirección de nuestro proyecto en github, y a través de esa dirección el resto del mundo puede ver nuestro proyecto, seguirlo, controlar nuestros avances, copiárselo localmente para mejorarlo, y colaborar con nosotros.
 
 Clonando localmente nuestro repositorio
 
