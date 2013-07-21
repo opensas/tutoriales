@@ -72,7 +72,13 @@ Para este tutorial utilizaremos el usuario 'hackatoner' y la cuenta de mail 'hac
 
 ![configurando git](images/github/github-config.png "Configurando git")
 
-Nota: También incluiremos esta configuración evitar un mensaje bastante molesto que git emite y para que tenga un comportamiento más conservador a la hora de actualizar ramas remotas. Para más información podés consultar <a href='http://stackoverflow.com/a/13148313/47633'>esta respuesta</a> en stackoverflow.
+También podés incluir esta configuración para que git te muestre la salida en pantalla utilizando colores:
+
+```
+$ git config --global color.ui true
+```
+
+Nota: También incluiremos esta configuración para evitar un mensaje bastante molesto que git emite y para que tenga un comportamiento más conservador a la hora de actualizar ramas remotas. Para más información podés consultar <a href='http://stackoverflow.com/a/13148313/47633'>esta respuesta</a> en <a href='http://stackoverflow.com'>stackoverflow</a>.
 
 ```
 $ git config --global push.default simple
@@ -329,7 +335,7 @@ Fast-forward
 
 En este caso, git nos dice que el archivo README.md fue actualizado.
 
-> en este artículo hemos trabajado exclusivamente desde la línea de comandos, sin embargo existen varias herramientas visuales que nos facilitan la tarea (una herramienta muy recomendable es <a href='http://www.syntevo.com/smartgithg/'>SmartGit</a>). Sin embargo, es recomendable trabajar un buen tiempo desde la línea de comandos para aprender bien los conceptos básicos antes de adoptar una herramienta visual.
+> En este artículo hemos trabajado exclusivamente desde la línea de comandos, sin embargo existen varias herramientas visuales que nos facilitan la tarea (una herramienta muy recomendable es <a href='http://www.syntevo.com/smartgithg/'>SmartGit</a>). Sin embargo, es recomendable trabajar un buen tiempo desde la línea de comandos para aprender bien los conceptos básicos antes de adoptar una herramienta visual.
 
 Conclusión
 ==========
@@ -340,7 +346,7 @@ En este artículo apenas hemos visto lo mínimo indispensable como para poder in
 
 Para más información no dejen de leer el libro <a href='http://git-scm.com/book/es/'>Pro Git</a> que se encuentra disponible en castellano, en el sitio de git. Además, cualquier duda que tengan acerca de git seguramente estará preguntada y contestada en <a href='http://stackoverflow.com/'>stackoverflow</a>.
 
-Por último, les dejamos un resumen ayuda-memoria para los más ansiosos:
+Por último, les dejamos un resumen ayuda-memoria para los más ansiosos, con algunos comandos extra:
 
 -------------
 
@@ -363,6 +369,7 @@ yum install git-core
 ```
 $ git config --global user.name "mi nombre de usuario"
 $ git config --global user.email mi_mail@ejemplo.com
+$ git config --global color.ui true
 $ git config --global push.default simple
 ```
 
@@ -392,10 +399,46 @@ git status
 git add <archivo>
 ```
 
+*Ver las diferencias entre los archivos preparados (staged) y no preparados (unstaged)*
+
+```
+git diff
+```
+
+*Ver las diferencias entre los archivos preparados (staged) y los confirmados (commited)*
+
+```
+git diff --cached
+```
+
+*Ver el historial de los commits*
+
+```
+git log
+```
+
 *Confirmar (commit) archivos*
 
 ```
 git commit -m 'mensaje del commit'
+```
+
+*Corregir el último commit*
+
+```
+git commit --amend -m "nuevo mensaje corregido"
+```
+
+*Undo: Sacar de stage el archivo y pasarlo a modified (unstage)*
+
+```
+git reset HEAD mi_archivo.txt
+```
+
+*Undo: Deshacer los cambios del archivo y volver a la versión del repositorio*
+
+```
+git checkout mi_archivo.txt
 ```
 
 *Enviar los cambios de mi repositorio local al repositorio remoto en github*
@@ -409,3 +452,19 @@ git push
 ```
 git pull
 ```
+
+----
+
+Material de referecia:
+
+[Pro Git](http://git-scm.com/book/es/)
+
+[Tutorial de Git en inglés](http://nyuccl.org/pages/GitTutorial/)
+
+[Machete](http://www.git-tower.com/files/cheatsheet/Git_Cheat_Sheet_grey.pdf)
+
+[Tutorial en Castellano](http://www.ptydev.com/tutoriales/tutorial-basico-de-git)
+
+[Configurando git](http://git-scm.com/book/es/Empezando-Configurando-Git-por-primera-vez)
+
+[Guardando cambios en el repositorio](http://git-scm.com/book/es/Fundamentos-de-Git-Guardando-cambios-en-el-repositorio)
