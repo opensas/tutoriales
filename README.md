@@ -12,7 +12,7 @@ Para participar del hackaton tendrás que aceptar las bases y condiciones del ev
 
 [Aquí](github_hackaton.md) tenés una guía rápida para sacar tu cuenta en github y preparar tu repositorio.
 
-Y [aquí](github.md) podés consultar una guía más detallada que te explica los conceptos básicos de los sistemas de control de cambios
+Y [aquí](github.md) podés consultar una guía más detallada que te explica los conceptos básicos de los sistemas de control de cambios, cómo trabajar con [git](http://git-scm.com/) y con [github](https://github.com/).
 
 ¿Dónde quedará alojada mi aplicación?
 -------------------------------------
