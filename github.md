@@ -136,15 +136,33 @@ En nuestro caso creamos un directorio 'proyectos' en nuestro directorio de usuar
 Flujo de trabajo con git
 ------------------------
 
-Es importante entender <a href='http://git-scm.com/book/es/Fundamentos-de-Git-Guardando-cambios-en-el-repositorio'>el flujo de trabajo con git</a>. Los arhivos en un repositorio pueden estar bajo seguimiento (tracked) o sin seguimiento (untracked). Cuando clonamos un repositorio todos los archivos estarán inicialmente bajo seguimiento de control (tracked).
+Es importante entender <a href='http://git-scm.com/book/es/Fundamentos-de-Git-Guardando-cambios-en-el-repositorio'>el flujo de trabajo con git</a>. La principal diferencia con otros sistemas de control de versiones, es que los archivos que tienen cambios no son automáticamente confirmados al hacer un commit, sino que hay que agregarlos manualmente para ser grabados (pasarlos al área de stage). Esto nos permite tener mayor control y granularidad a la hora de grabar nuestros cambios.
 
-Los archivos bajo seguimiento (tracked) pueden estar sin modificaciones (unmodified) con modificaciones (modified), o preparados para ser grabados (staged).
-
-Cada vez que querramos confirmar algún cambio en el repositorio, deberemos preparar el archivo (pasarlo a stage), luego de lo cual grabaremos los cambios (commit) de todos los archivos que estaban preparados. En ese momento, los cambios se grabarán en el repositorio como un nuevo commit, y los archivos volverán a estado sin modificaciones.
-
-Este flujo de trabajo se ve reflejado en el siguiente cuadro:
+Los archivos en un repositorio de git pueden estar bajo los siguientes estados:
 
 ![Flujo de trabajo con git](http://git-scm.com/figures/18333fig0201-tn.png "Flujo de trabajo con git")
+
+*Sin seguimiento (untracked)*
+Git ignora estos archivos
+
+*Bajo seguimiento, sin modificaciones (tracked, unmodified)*
+Git está al tanto de estos archivos, pero no tuvieron modificaciones desde el último commit.
+
+*Bajo seguimiento, con modificaciones (tracked, modified)*
+El archivo está en git, pero contiene cambios de los cuales git no está al tanto. Estos cambios NO serán incluidos en el próximo commit.
+
+*Bajo seguimiento, preparado (tracked, staged)*
+Los cambios de estos archivos serán incluidos en el próximo commit. En la jerga de git se dice que estos archivos están en el área de stage (staging area)
+
+El flujo sería el siguiente:
+
+Cuando clonamos un repositorio todos los archivos estarán inicialmente bajo seguimiento de control (tracked).
+
+Al agregar nuevos archivos deberemos ponerlos bajo seguimiento con el comando (tracked) 'git add', con lo cual también pasará a estado preparado (staged)
+
+Al modificar un archivo que ya estaba bajo seguimiento , también mediante el comando 'git add' haremos que pase de estado con modificaciones a preparado (staged)
+
+Finalmente, para confirmar los cambios de los archivos preparados (staged) ejecutaremos el comando 'git commit', con lo cual las modificaciones se grabarán en el repositorio, se creará un nuevo commit, y los archivos volverán a estado sin modificaciones (unmodified).
 
 Vamos a verlo con un ejemplo práctico. Mediante el comando 'git status' podemos ver el estado de los archivos en nuestro directorio de trabajo.
 
