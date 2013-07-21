@@ -6,7 +6,7 @@ tl;dr (está bien, ya conozco la teoría, quiero el resumen ayuda-memoria)
 Sistemas de control de versiones
 --------------------------------
 
-A la hora de desarrollar una aplicación, un sitio web o una visualización, vamos generando distintos archivos (archivos de código fuente, html, documentación, planillas, hojas de estilo, gráficos, etc) que son los que conformarán nuestro proyecto.
+A la hora de desarrollar una aplicación, un sitio web o una visualización, vamos generando distintos archivos (código fuente, html, documentación, planillas, hojas de estilo, gráficos, etc.) que son los que conformarán nuestro proyecto.
 
 A medida que estos proyectos se vuelven más complejos se torna indispensable poder llevar el control de los cambios que efectuamos, en especial cuando trabajamos en equipo y debemos recibir y gestionar contribuciones de terceros.
 
@@ -21,16 +21,16 @@ Uno de los sistemas de control de versiones que últimamente ha cobrado gran pop
 
 A diferencia de otros sistemas de control de versiones que cuentan con un repositorio central al cual hay que conectarse para obtener o enviar nuevas versiones, git es un sistema distribuido. Esto significa que cada repositorio de git contiene todo el historial del proyecto y es completamente autónomo e independiente de cualquier otro repositorio central o acceso a la red.
 
-Para más información acerca de Git puedes consultar <a href='http://git-scm.com/'>su sitio web</a>, en el cual encontrarás también el libreo <a href='http://git-scm.com/book'>Pro Git</a> completo en castellano.
+Para más información acerca de Git puedes consultar <a href='http://git-scm.com/'>su sitio web</a>, en el cual encontrarás también el libro <a href='http://git-scm.com/book'>Pro Git</a> completo en castellano.
 
 Github
 ------
 
 <a href='https://github.com/'><img src='images/github/github-github_logo.png' alt='github' title='github'/></a>
 
-Github es un servicio web que te permite alojar el código fuente de tus proyectos, y utiliza git como sistema de control de versiones. Pero la principal característica de Github es que provee una plataforma social para el desarrollo de aplicaciones, permitiéndote publicar tus proyectos, seguir aquéllos que te interesan, colaborar con proyectos existentes y toda una serie de servicios sumamente útiles para trabajar de manera colaborativa.
+Github es un servicio web que te permite alojar el código fuente de tus proyectos, utilizando git como sistema de control de versiones. Pero la principal característica de Github es que provee una plataforma social para el desarrollo de aplicaciones, permitiéndote publicar tus proyectos, seguir aquéllos que te interesan, colaborar con proyectos existentes y toda una serie de servicios sumamente útiles para trabajar de manera colaborativa.
 
-Muchos lo describen como 'el Facebook de los desarrolladores', pero últimamente su uso alcanza a otras profesiones, y hacia principios de 2013 ya contaba con más de tres millones de usuarios alojando más de cinco millones de repositorios (<a href='https://en.wikipedia.org/wiki/GitHub#cite_ref-27'>ver cita</a>).
+Muchos lo describen como 'el Facebook de los desarrolladores', pero últimamente su uso alcanza a otras profesiones, y hacia principios de 2013 ya contaba con más de tres millones de usuarios y más de cinco millones de repositorios (<a href='https://en.wikipedia.org/wiki/GitHub#cite_ref-27'>ver cita</a>).
 
 Manos a la obra
 ===============
@@ -46,13 +46,13 @@ Si estás utilizando Ubuntu (o cualquier otra distribución basada en Debian) s�
 $ sudo apt-get install git
 ```
 
-Si estás usando Fedora (o cualquier otra distribución que usa paquetes rpm) deberás abrir una ventana de comandos e ingresar:
+Si estás usando Fedora (o cualquier otra distribución que use paquetes rpm) deberás abrir una ventana de comandos e ingresar:
 
 ```
 $ yum install git-core
 ```
 
-Para probar que git se instaló correctamente ingresa el siguiente comando:
+Para verificar que git se instaló correctamente ingresa el siguiente comando:
 
 ```
 $ git --version
@@ -119,7 +119,7 @@ Github también ha creado para nosotros un url: https://github.com/hackatoner/mi
 Clonando localmente nuestro repositorio
 ---------------------------------------
 
-Para poder trabajar en nuestro proyecto, debemos disponer de los archivos localmente en nuestro equipo. Por eso lo que haremos será copiarnos (clonar en la jerga de git) el repositorio entero, junto con su historial de cambios) en nuestra estación de trabajo.
+Para poder trabajar en nuestro proyecto debemos disponer de los archivos localmente en nuestro equipo. Por eso lo que haremos será copiarnos (clonar en la jerga de git) el repositorio entero, junto con su historial de cambios) en nuestra estación de trabajo.
 
 Para clonar localmente nuestro repositorio debemos copiar la dirección que se encuentra en la parte inferior derecha de la página de nuestro proyecto:
 
@@ -148,17 +148,21 @@ Los archivos en un repositorio de git pueden estar bajo los siguientes estados:
 
 ![Flujo de trabajo con git](http://git-scm.com/figures/18333fig0201-tn.png "Flujo de trabajo con git")
 
-*Sin seguimiento (untracked)*
-Git ignora estos archivos
+-  *Sin seguimiento (untracked)*
 
-*Bajo seguimiento, sin modificaciones (tracked, unmodified)*
-Git está al tanto de estos archivos, pero no tuvieron modificaciones desde el último commit.
+    Git ignora estos archivos
 
-*Bajo seguimiento, con modificaciones (tracked, modified)*
-El archivo está en git, pero contiene cambios de los cuales git no está al tanto. Estos cambios NO serán incluidos en el próximo commit.
+-  *Bajo seguimiento, sin modificaciones (tracked, unmodified)*
 
-*Bajo seguimiento, preparado (tracked, staged)*
-Los cambios de estos archivos serán incluidos en el próximo commit. En la jerga de git se dice que estos archivos están en el área de stage (staging area)
+    Git está al tanto de estos archivos, pero los mismos fueron modificados desde el último commit.
+
+-  *Bajo seguimiento, con modificaciones (tracked, modified)*
+
+    El archivo está en git, pero contiene cambios de los cuales git no está al tanto. Estos cambios NO serán incluidos en el próximo commit.
+
+-  *Bajo seguimiento, preparado (tracked, staged)*
+
+    Los cambios de estos archivos serán incluidos en el próximo commit. En la jerga de git se dice que estos archivos están en el área de stage (staging area)
 
 El flujo sería el siguiente:
 
@@ -335,7 +339,7 @@ Fast-forward
 
 En este caso, git nos dice que el archivo README.md fue actualizado.
 
-> En este artículo hemos trabajado exclusivamente desde la línea de comandos, sin embargo existen varias herramientas visuales que nos facilitan la tarea (una herramienta muy recomendable es <a href='http://www.syntevo.com/smartgithg/'>SmartGit</a>). Sin embargo, es recomendable trabajar un buen tiempo desde la línea de comandos para aprender bien los conceptos básicos antes de adoptar una herramienta visual.
+> En este artículo hemos trabajado exclusivamente desde la línea de comandos, sin embargo existen varias [herramientas visuales](http://git-scm.com/downloads/guis) que nos facilitan la tarea (una herramienta muy recomendable es <a href='http://www.syntevo.com/smartgithg/'>SmartGit</a>). Sin embargo, es recomendable trabajar un buen tiempo desde la línea de comandos para aprender bien los conceptos básicos antes de adoptar una herramienta visual.
 
 Conclusión
 ==========
@@ -464,6 +468,8 @@ Material de referecia:
 [Machete](http://www.git-tower.com/files/cheatsheet/Git_Cheat_Sheet_grey.pdf)
 
 [Tutorial en Castellano](http://www.ptydev.com/tutoriales/tutorial-basico-de-git)
+
+[Instalando git](http://git-scm.com/book/es/Empezando-Instalando-Git#Instalando-en-Linux)
 
 [Configurando git](http://git-scm.com/book/es/Empezando-Configurando-Git-por-primera-vez)
 
