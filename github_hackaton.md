@@ -3,7 +3,7 @@
 Cómo publicar tu aplicación en github
 =====================================
 
-Para participar del hackaton de datos programAR necesitarás publicar tu trabajo en un repositorio de github bajo una [licencia libre](http://www.gnu.org/licenses/license-list.html#GPLCompatibleLicenses) reconocida por la [Free Software Foundation](http://www.fsf.org/), como la [GPLv3](http://www.gnu.org/licenses/gpl.html).
+Para participar del Hackatón de datos ProgramAR necesitarás publicar tu trabajo en un repositorio de github bajo una [licencia libre](http://www.gnu.org/licenses/license-list.html#GPLCompatibleLicenses) reconocida por la [Free Software Foundation](http://www.fsf.org/), como la [GPLv3](http://www.gnu.org/licenses/gpl.html).
 
 Aquí te explicaremos cómo hacerlo
 
@@ -55,7 +55,7 @@ Luego hacemos click en *Create repository*.
 
 ![Mi primer proyecto en github](images/github/github-mi_primer_proyecto.png "Mi primer proyecto en github")
 
-Github también ha creado para nosotros una url, en este ejemplo: https://github.com/hackatoner/mi_primer_proyecto. Esta es la dirección de tu proyecto en github que deberás informar a los organizadores del hackton.
+Github también ha creado para nosotros una url, en este ejemplo: https://github.com/hackatoner/mi_primer_proyecto. Esta es la dirección de tu proyecto en github que deberás informar a los organizadores del Hackatón.
 
 Clonando localmente nuestro repositorio
 ---------------------------------------
@@ -118,4 +118,4 @@ Esta es una guía resumida para que puedas comenzar a trabajar en tu proyecto lo
 
 Si querés una explicación más detallada no dejes de leer [este artículo](github.md).
 
-No olvides que durante el hackaton habrá mentores para ayudarte con estas cuestiones.
+No olvides que durante el Hackatón habrá mentores para ayudarte con estas cuestiones.
