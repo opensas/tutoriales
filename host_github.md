@@ -1,12 +1,122 @@
 ![Portal de datos publicos](images/portal/banner_portal_datos.png)
 
-Introducción a git y github
-===========================
+Cómo alojar tus aplicaciones en github
+======================================
 
 <a href='#tldr'>tl;dr</a> (está bien, ya conozco la teoría, quiero el <a href='#tldr'>resumen</a> ayuda-memoria)
 
-Sistemas de control de versiones
---------------------------------
+Github como servidor de aplicaciones
+------------------------------------
+
+Github es un sitio web que te permite alojar el *código fuente* de tus aplicaciones, brindando además prestaciones propias de las redes sociales.
+
+Si bien no provee un servicio de hosting completo, que te permita ejecutar código del lado del servidor (como podría ser una aplicación hecha con php, ruby o python, por ejemplo), Github cuenta con el servicio [Github pages](http://pages.github.com/) que te permite publicar páginas web estáticas, lo cual puede resultar útil para publicar documentación o el sitio de presentación de tu aplicación.
+
+En los últimos tiempos han surgido una serie de aplicaciones desarrolladas con html, css y javascript y que simplemente se limitan a consumir servicios web desde el lado del cliente. Se trata de hecho de páginas estáticas que no necesitan ejecutar páginas desde el servidor, todo el procesamiento ocurre en el explorador web del usuario.
+
+Si este es tu caso, puedes utilizar github para alojar las páginas de tu aplicación.
+
+En el caso particular de open data, es común también en el caso de visualizaciones o aplicaciones similares, tomar los datasets, trabajar con ellos con diversas herramientas ([OpenRefine](http://openrefine.org/), [LibreOffice Calc](http://es.libreoffice.org/), Excel, [mysql](http://www.mysql.com/), [PostgreSQL](http://www.postgresql.org/)) y luego exponerlas a través de un web service ([fussion tables](http://www.google.com/drive/apps.html#fusiontables), [CartoDB](http://cartodb.com/)) o simplemente incluir la información en json en el código de tu aplicación.
+
+En todos estos casos, tu aplicación podrá ser alojada en github.
+
+Github Pages
+------------
+
+Pues bien, arrancaremos con un repositorio en github en donde tenemos una aplicación estática (html + css + js) que no requiere procesamiento del lado del servidor.
+
+El proyecto es simplemente una aplicación que accede a una lista de contactos georreferenciada a través de un web service expuesto en [CartoDB](http://cartodb.com/) y lo muestra en un mapa utilizando la librería [LeafLet](http://leafletjs.com/).
+
+El web service es de acceso público y pueden probarlo mediante la siguiente consulta: [http://devel.cartodb.com/api/v2/sql?q=select * from my_contacts](http://devel.cartodb.com/api/v2/sql?q=select * from my_contacts)
+
+La aplicación consiste en arhivos html, css y js, ya que no requiere ningún procesamiento del lado del servidor.
+
+Gracias a esto es que podemos usar [GitHub Pages](http://pages.github.com/) para alojarla.
+
+https://help.github.com/articles/creating-project-pages-manually
+
+Lo primero que haremos será habilitar GitHub Pages. Para ello tenemos que crear una *rama* de git que se llame gh-pages, y ahí pondremos el contenido que querramos que GitHub publique.
+
+```
+$ git clone https://github.com/hackatoner/hosting.git
+Clonar en «hosting»...
+remote: Counting objects: 14, done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 14 (delta 1), reused 10 (delta 1)
+Unpacking objects: 100% (14/14), done.
+```
+
+Luego creamos una rama *huérfana* llamada *gh-pages*
+
+```
+$ git checkout --orphan gh-pages
+Switched to a new branch 'gh-pages'
+```
+
+Y guardamos los cambios
+
+```
+hackatoner@station:~/proyectos/hosting$ git commit -m 'creamos la rama gh-pages'
+[gh-pages (root-commit) 1ee8dd4] creamos la rama gh-pages
+ 8 files changed, 901 insertions(+)
+ create mode 100644 LICENSE
+ create mode 100644 README.md
+ create mode 100644 index.html
+ create mode 100644 js/bootstrap.min.js
+ create mode 100644 js/cartodbData.js
+ create mode 100644 js/leaflet.css.min.js
+ create mode 100644 js/leaflet.sprite.js
+ create mode 100644 js/leaflet.sprite.min.js
+```
+
+Finalmente, actualizamos el repositorio remoto de GitHub y configuramos nuestra rama local gh-pages para que siga la rama gh-pages de GitHub:
+
+```
+hackatoner@station:~/proyectos/hosting$ git push --set-upstream origin gh-pages
+Username for 'https://github.com': hackatoner
+Password for 'https://hackatoner@github.com':
+Counting objects: 11, done.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 70.81 KiB, done.
+Total 11 (delta 1), reused 0 (delta 0)
+To https://github.com/hackatoner/hosting.git
+ * [new branch]      gh-pages -> gh-pages
+Branch gh-pages set up to track remote branch gh-pages from origin.
+```
+
+Si visitamos nuestro repositorio en GitHub, y hacemos click en *Settings*, veremos que GitHub recibió la nueva rama *gh-pages* y nos avisa que en 10 minutos estará disponible:
+
+![Hosteando nuestra aplicación](images/github_hosting/github_hosting-settins.png "Hosteando nuestra aplicación")
+
+Luego de unos instantes, podremos visitar http://hackatoner.github.io/hosting y veremos nuestra aplicación en acción:
+
+![Nuestra aplicación corriendo](images/github_hosting/github_hosting-application_running.png "Nuestra aplicación corriendo en GitHub")
+
+
+---
+
+Si te interesa la aplicación aquí hay una [serie de artículos](http://opensas.wordpress.com/2013/06/27/journey-to-the-open-data-jungle-with-openrefine-cartodb-leaflet-and-javascript/) en la que explico paso a paso como desarrollarla:
+
+[Trabajando con OpenRefine](http://opensas.wordpress.com/2013/06/27/journey-to-the-open-data-jungle-with-openrefine-cartodb-leaflet-and-javascript/)
+
+[Georreferenciando información con OpenRefine y OpenStreetMap](http://opensas.wordpress.com/2013/06/30/using-openrefine-to-geocode-your-data-using-google-and-openstreetmap-api/)
+
+[Publicando tu información en un web service con CartoDB](http://opensas.wordpress.com/2013/07/06/publish-your-own-geocoded-web-services-with-cartodb/)
+
+
+Normalmente uno tendrá en GitHub el código fuente de su aplicación, y además querrá tener un sitio web estático para publicar al documentación o novedades acerca del proyecto.
+
+A tales efectos tendremos que crear una *rama* llamada *gh-pages*, y GitHub simplemente publicará el contenido de esa rama.
+
+En nuestro caso, nosotros queremos que en esa rama figure la propia aplicación, es decir, queremos publicar efectivamente el código fuente.
+
+
+https://help.github.com/articles/creating-project-pages-manually
+
+
+---
+
+
 
 A la hora de desarrollar una aplicación, un sitio web o una visualización, vamos generando distintos archivos (código fuente, html, documentación, planillas, hojas de estilo, gráficos, etc.) que son los que conformarán nuestro proyecto.
 
@@ -51,7 +161,7 @@ $ sudo apt-get install git
 Si estás usando Fedora (o cualquier otra distribución que use paquetes rpm) deberás abrir una ventana de comandos e ingresar:
 
 ```
-$ sudo yum install git-core
+$ yum install git-core
 ```
 
 Para verificar que git se instaló correctamente ingresa el siguiente comando:

@@ -21,5 +21,5 @@ Inicialmente todas las aplicaciones y visualizaciones que participen del Hackato
 
 Aquéllas aplicaciones que sean seleccionadas, pasarán a la sección *Apps* del Portal de Datos de la Nación, y serán alojadas en servidores del Estado Nacional.
 
-Para alojar tus aplicaciones puedes recurrir a [Github](https://help.github.com/categories/20/articles) (si se trata de una aplicación html + js estática), [OpenShift](https://www.openshift.com/), [Heroku](https://www.heroku.com/), [Amazon](http://aws.amazon.com/free/) u otras alternativas.
+Para alojar tus aplicaciones puedes recurrir a [Github](host_github.md) (si se trata de una aplicación html + js estática), [OpenShift](https://www.openshift.com/), [Heroku](https://www.heroku.com/), [Amazon](http://aws.amazon.com/free/) u otras alternativas.
 

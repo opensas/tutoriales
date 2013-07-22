@@ -19,7 +19,7 @@ $ sudo apt-get install git
 Si estás usando Fedora (o cualquier otra distribución que use paquetes rpm) deberás abrir una ventana de comandos e ingresar:
 
 ```
-$ yum install git-core
+$ sudo yum install git-core
 ```
 
 Luego deberás [configurar git](http://git-scm.com/book/es/Empezando-Configurando-Git-por-primera-vez). Ingresá los siguientes comandos para configurar tu nombre de usuario y dirección de correo electrónico.
