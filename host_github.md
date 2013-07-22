@@ -86,7 +86,7 @@ Branch gh-pages set up to track remote branch gh-pages from origin.
 
 Si visitamos nuestro repositorio en GitHub, y hacemos click en *Settings*, veremos que GitHub recibió la nueva rama *gh-pages* y nos avisa que en 10 minutos estará disponible:
 
-![Hosteando nuestra aplicación](images/github_hosting/github_hosting-settins.png "Hosteando nuestra aplicación")
+![Hosteando nuestra aplicación](images/github_hosting/github_hosting-settings.png "Hosteando nuestra aplicación")
 
 Luego de unos instantes, podremos visitar http://hackatoner.github.io/hosting y veremos nuestra aplicación en acción:
 
