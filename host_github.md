@@ -17,9 +17,9 @@ Sin embargo, si tu aplicación está compuesta únicamente por páginas estátic
 Aplicaciones del lado del cliente
 ---------------------------------
 
-En los últimos tiempos han surgido una serie de aplicaciones desarrolladas con html, css y javascript y que simplemente se limitan a consumir servicios web desde el lado del cliente. Se trata de hecho de páginas estáticas que no necesitan ejecutar páginas desde el servidor, todo el procesamiento ocurre en el explorador web del usuario.
+En los últimos tiempos han surgido una serie de aplicaciones desarrolladas con html, css y javascript que simplemente se limitan a consumir servicios web desde el lado del cliente. Se trata de hecho de páginas estáticas que no necesitan ejecutar páginas desde el servidor, todo el procesamiento ocurre en el explorador web del usuario.
 
-En el caso particular aplicaciones o visualizaciones de open data, es común tomar los datasets, trabajar con ellos con diversas herramientas ([OpenRefine](http://openrefine.org/), [LibreOffice Calc](http://es.libreoffice.org/), Excel, [mysql](http://www.mysql.com/), [PostgreSQL](http://www.postgresql.org/)) y luego exponerlas a través de un web service ([fussion tables](http://www.google.com/drive/apps.html#fusiontables), [CartoDB](http://cartodb.com/)) o simplemente incluir la información en json en el código de tu aplicación.
+En el caso particular aplicaciones o visualizaciones de open data, es común tomar los datasets y luego exponerlos a través de un web service o simplemente incluir la información en json en el código de tu aplicación.
 
 En todos estos casos, podrás utilizar [Github pages](http://pages.github.com/) para publicar tu aplicación.
 
@@ -28,7 +28,7 @@ Github Pages
 
 Pues bien, arrancaremos con un repositorio en github en donde tenemos una aplicación estática (html + css + js) que no requiere procesamiento del lado del servidor.
 
-El proyecto es simplemente una aplicación que accede a una lista de contactos georreferenciada a través de un web service expuesto en [CartoDB](http://cartodb.com/) y lo muestra en un mapa utilizando la librería [LeafLet](http://leafletjs.com/).
+El proyecto es simplemente una aplicación que accede a una lista de contactos a través de un web service expuesto en [CartoDB](http://cartodb.com/) y lo muestra en un mapa utilizando la librería [LeafLet](http://leafletjs.com/).
 
 > Si te interesa la aplicación aquí hay una [serie de artículos](http://opensas.wordpress.com/2013/06/27/journey-to-the-open-data-jungle-with-openrefine-cartodb-leaflet-and-javascript/) en la que explico paso a paso como desarrollarla.
 
@@ -38,20 +38,16 @@ La aplicación consiste en arhivos html, css y js, y no requiere ningún procesa
 
 Gracias a esto es que podemos usar [GitHub Pages](http://pages.github.com/) para alojarla.
 
-Lo primero que haremos será [habilitar GitHub Pages](https://help.github.com/articles/creating-project-pages-manually). Para ello tenemos que crear una *rama* de git que se llame gh-pages, y ahí pondremos el contenido que querramos que GitHub publique.
+Lo primero que haremos será [habilitar GitHub Pages](https://help.github.com/articles/creating-project-pages-manually). Para ello tenemos que crear una *rama* de git que se llame *gh-pages*, y ahí pondremos el contenido que querramos que GitHub publique.
 
 Primero clonamos localmente nuestro proyecto de GitHub:
 
 ```
 $ git clone https://github.com/hackatoner/hosting.git
-Clonar en «hosting»...
-remote: Counting objects: 14, done.
-remote: Compressing objects: 100% (13/13), done.
-remote: Total 14 (delta 1), reused 10 (delta 1)
-Unpacking objects: 100% (14/14), done.
+$ cd hosting
 ```
 
-Luego creamos una rama *huérfana* llamada *gh-pages*
+Luego creamos una rama [*huérfana*](http://robots.thoughtbot.com/post/49004256633/its-for-the-orphans) llamada *gh-pages*
 
 ```
 $ git checkout --orphan gh-pages
